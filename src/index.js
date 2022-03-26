@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Header from "./common/header/Header";
+import "./index.css";
 
 ReactDOM.render(
-
+    <React.StrictMode>
+    <Header />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
