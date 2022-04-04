@@ -3,7 +3,7 @@
     height: 36px;
     padding: 8px 8px 32px 16px;
 }
-.logo{
+.logo{ 
     height: 35px;
     background-color: #ff7f7f;
     animation: rotate 8s infinite linear;
