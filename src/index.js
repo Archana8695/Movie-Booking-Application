@@ -5,11 +5,10 @@ import Home from "./screens/home/Home";
 import "./index.css";
 
 ReactDOM.render(
-    <React.StrictMode>
-    
-    <Home />
-  </React.StrictMode>,
+  <Home />,
+  
   document.getElementById("root")
+
 );
 
 // If you want to start measuring performance in your app, pass a function
