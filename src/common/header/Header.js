@@ -9,6 +9,13 @@ class Header extends Component {
             src="https://cdn.upgrad.com/uploads/production/286e1f11-1897-4d0c-ab0f-6b2bfc1ce642/logo.svg"
             alt="Logo" className="logo"
           />
+          {this.props.isDetails ? (
+          <Button variant="contained" color="primary">
+            Book Now
+          </Button>
+          ) : (
+          ""
+          )}
         </div>
       );
     }

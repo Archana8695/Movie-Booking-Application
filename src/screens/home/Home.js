@@ -9,7 +9,7 @@ import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 import genres from "../../common/genre";
 import artists from "../../common/artists";
 import Filter, { filterObject } from "./Filter";
-
+import { Link } from "react-router-dom";
 
 class Home  extends Component {
     constructor(props) {
@@ -46,8 +46,11 @@ class Home  extends Component {
               filterObject.artists.includes(
                 `${artist.first_name} ${artist.last_name}`
               )
-            )
-          ) {
+            ) ||
+            (new Date(filterObject.releaseDateStart) <
+              new Date(movie.release_date) &&
+              new Date(filterObject.releaseDateEnd) > new Date(movie.release_date)
+            ){
             return movie;
           }
         });
@@ -59,7 +62,7 @@ class Home  extends Component {
     render() {
         return(
             <div>
-        <Header />
+        <Header isDetails={false} />
         <span className="headingUpComingMovies">Upcoming Movies</span>
         <SingleLineImageList moviesData={this.state.moviesData} />
             <div className="flex-container">
@@ -67,6 +70,7 @@ class Home  extends Component {
             <ImageList cols={4} rowHeight={350}>
               {this.state.filteredObject.map((item) => (
                 <ImageListItem key={item.id} className="featuredImageContainer">
+                <Link to="/details" state={{ movie: item }}>
                   <img
                     src={item.poster_url}
                     srcSet={item.poster_url}
@@ -80,6 +84,7 @@ class Home  extends Component {
                       item.release_date
                     ).toDateString()}`}
                   />
+                  </Link>
                 </ImageListItem>
               ))}
             </ImageList>

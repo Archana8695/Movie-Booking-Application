@@ -13,6 +13,10 @@
     display: flex;
     margin: 16px; 
   }
+  .featuredImage{
+    object-fit: contain;
+    width: 100%;
+  }
   
   .left {
     width: 76%;

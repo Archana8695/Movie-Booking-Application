@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./screens/home/Home";
 import "./index.css";
-
+import detail from "./screens/details/Detail";
 ReactDOM.render(
-  <Home />,
-  
-  document.getElementById("root")
+  <Router>
+    <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/details" element={<Detail />} />
+    </Routes>
+  </Router>,
+document.getElementById("root")
 
 );
 

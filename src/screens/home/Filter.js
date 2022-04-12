@@ -54,7 +54,7 @@ const Filter = (props) => {
             id="movieName"
             onChange={(e) => {
               filterObject.name = e.target.value;
-              console.log(filterObject.name);
+              
             }}
           />
         </FormControl>
@@ -77,7 +77,7 @@ const Filter = (props) => {
             InputLabelProps={{ shrink: true }}
             onChange={(e) => {
               filterObject.releaseDateStart = e.target.value;
-              console.log(filterObject.releaseDateStart);
+             
             }}
           />
         </FormControl>
@@ -88,7 +88,7 @@ const Filter = (props) => {
             InputLabelProps={{ shrink: true }}
             onChange={(e) => {
               filterObject.releaseDateEnd = e.target.value;
-              console.log(filterObject.releaseDateEnd);
+              
             }}
           />
         </FormControl>
