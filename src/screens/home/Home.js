@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import Header from "../../common/header/Header";
 import "./Home.css";
 import SingleLineImageList from "./SingleLineImageList";
 import moviesData from "../../common/moviesData";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
-
 import genreData from "./genreData";
 import artistsData from "./artistsData";
 import Filter, { filterObject } from "./Filter";
 import { Link } from "react-router-dom";
-
 function Home() {
   const [state, setState] = useState({
     moviesData: moviesData,
@@ -58,7 +55,7 @@ function Home() {
   };
   return (
     <div>
-      <Header isDetails={false} />
+     
       <span className="headingUpComingMovies">Upcoming Movies</span>
       <SingleLineImageList moviesData={state.moviesData} />
 

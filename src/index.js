@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./screens/home/Home";
 import "./index.css";
 import Detail from "./screens/Details/Detail";
+import Header from "./common/header/Header";
 
 ReactDOM.render(
   <Router>
+  <Header />
     <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/details" element={<Detail />} />
