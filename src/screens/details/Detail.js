@@ -1,16 +1,16 @@
 import {
-  Box,
-  GridList,
-  GridListTile,
+  
+
+
   ImageList,
   ImageListItem,
   ImageListItemBar,
   Typography,
 } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "../../common/header/Header";
 import "./Detail.css";
-import moviesData from "../../common/moviesData";
+
 import { Link, useLocation } from "react-router-dom";
 import YouTube from "react-youtube";
 import RatingStars from "./RatingStars";
@@ -28,7 +28,11 @@ const Detail = () => {
       </Link>
       <div className="movieDetails">
         <div className="detailsLeftPart">
-          <img src={movieData.poster_url} className="detailImage" />
+        <img
+            src={movieData.poster_url}
+            className="detailImage"
+            alt="movieData.title"
+          />
         </div>
         <div className="detailsMiddlePart">
           <Typography variant="h5">
@@ -80,7 +84,7 @@ const Detail = () => {
             {movieData.artists.map((artist) => {
               return (
                 <ImageListItem key={artist.id}>
-                  <img src={artist.profile_url} />
+                  <img src={artist.profile_url} alt={artist.first_name} />
                   <ImageListItemBar
                     title={`${artist.first_name} ${artist.last_name}`}
                   ></ImageListItemBar>

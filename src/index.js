@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./screens/home/Home";
 import "./index.css";
 import Detail from "./screens/Details/Detail";
-import BookShow from "./screens/bookshow/BookShow";
+
 ReactDOM.render(
   <Router>
     <Routes>
@@ -14,7 +14,6 @@ ReactDOM.render(
     </Routes>
   </Router>,
 document.getElementById("root")
-
 );
 
 // If you want to start measuring performance in your app, pass a function
