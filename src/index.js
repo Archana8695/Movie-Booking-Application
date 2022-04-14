@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./screens/home/Home";
 import "./index.css";
-import detail from "./screens/details/Detail";
+import Detail from "./screens/Details/Detail";
+import BookShow from "./screens/bookshow/BookShow";
 ReactDOM.render(
   <Router>
     <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/details" element={<Detail />} />
+        {/* <Route exact path="/booknow" element={<BookShow />} /> */}
     </Routes>
   </Router>,
 document.getElementById("root")

@@ -10,7 +10,6 @@ import genres from "../../common/genre";
 import artists from "../../common/artists";
 import Filter, { filterObject } from "./Filter";
 import { Link } from "react-router-dom";
-
 class Home  extends Component {
     constructor(props) {
         super(props);
@@ -50,10 +49,11 @@ class Home  extends Component {
             (new Date(filterObject.releaseDateStart) <
               new Date(movie.release_date) &&
               new Date(filterObject.releaseDateEnd) > new Date(movie.release_date)
-            ){
+            ) ){
             return movie;
           }
         });
+
         const newState = this.state;
         newState.filteredObject = filteredMovies;
     
