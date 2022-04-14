@@ -11,7 +11,7 @@ class Header extends Component {
             alt="Logo" className="logo"
           />
         <div className="buttonContainer">
-          {this.props.isDetails ? (
+          { this.props.isDetails ? (
             <Button
               className="bookNowButton"
               variant="contained"

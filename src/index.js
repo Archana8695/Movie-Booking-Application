@@ -10,7 +10,7 @@ ReactDOM.render(
     <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/details" element={<Detail />} />
-        {/* <Route exact path="/booknow" element={<BookShow />} /> */}
+        { /* <Route exact path="/booknow" element={<BookShow />} /> */}
     </Routes>
   </Router>,
 document.getElementById("root")
