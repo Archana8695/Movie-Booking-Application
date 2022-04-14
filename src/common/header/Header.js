@@ -33,6 +33,12 @@ function Header(props) {
   const handleUpdateUser = (user) => {
     setUser(user);
   };
+  const handleLoginLogout = () => {
+    if (userLoggedIn) {
+      setUserLoggedIn(false);
+      closeModal();
+    }
+  };
 
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
@@ -61,7 +67,11 @@ function Header(props) {
         <Button
           className="loginLogoutButton"
           variant="contained"
-          onClick={() => setIsModalOpen(true)}
+          onClick={() => {
+            setIsModalOpen(true);
+            handleLoginLogout();
+        
+          }}
         >
           {userLoggedIn ? "LOGOUT" : "LOGIN"}
         </Button>
